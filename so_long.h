@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:12:39 by psaeyang          #+#    #+#             */
-/*   Updated: 2022/12/27 14:54:43 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/04 05:47:23 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@
 # include "./libft/libft.h"
 
 void    ft_error(char *error);
-void    openfile(char *av);
+void    open_check(char *av);
+void    check_five(char *checkline);
 int checkber(char *av);
 int ft_strlen_nonl(char *s);
 
