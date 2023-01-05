@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:12:39 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/06 04:33:42 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/06 05:27:41 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 
 void    ft_error(char *error);
 void    open_check(char *av);
+void check_wall(char *checkline);
 int check_five(char *checkline);
 int checkber(char *av);
 int ft_strlen_nonl(char *s);
