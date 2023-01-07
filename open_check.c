@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 04:07:50 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/06 06:26:38 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/07 01:48:30 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void open_check(char *av)
     fd = open(av, O_RDONLY);
     checkline = get_next_line(fd);
     c = check_five(checkline);
-    check_wall(checkline);
     lencheck = ft_strlen_nonl(checkline);
     while (checkline)
     {
@@ -37,7 +36,6 @@ void open_check(char *av)
         }
         c = check_five(checkline);
         printf("c = %d\n", c);
-        check_wall(checkline);
     }
     if (c < 1)
     {

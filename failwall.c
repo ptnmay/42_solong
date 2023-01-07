@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 05:34:43 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/06 05:30:05 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/07 01:44:30 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void check_wall(char *checkline)
         i++;
     if (checkline[i] != 1)
     {
-        if (ft_strchr(&checkline[0], '1') == NULL && ft_strrchr(&checkline[ft_strlen(checkline)], '1') == NULL)
+        if (checkline[0] != 1 && checkline[ft_strlen(checkline)] != 1)
             free(checkline);
             ft_error("wall error");
             exit(0);
