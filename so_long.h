@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:12:39 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/07 01:47:50 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/10 02:28:28 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,21 @@
 # include "./get_next_line/get_next_line_bonus.h"
 # include "./libft/libft.h"
 
+typedef struct t_game
+{
+    char    **twoarray;
+    int hight;
+    int len;
+    int nabwalk;
+}   gm;
+
 void    ft_error(char *error);
-void    open_check(char *av);
-//void failwall(char *checkline);
+void    open_check(char *av, gm *game);
 int check_five(char *checkline);
 int checkber(char *av);
 int ft_strlen_nonl(char *s);
 
-// typedef struct
-// {
-//     int hight;
-//     int weigth;
 
-// }
 
 
 #endif

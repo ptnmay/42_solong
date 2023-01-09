@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/07 01:45:34 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/10 02:27:21 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,15 @@ int    checkber(char *av)
 
 int main (int ac, char **av)
 {
+    gm *game;
+
+    game->hight = 0;
+    game->len = 0;
+    game->nabwalk = 0;
     if (ac == 2)
     {
         if (checkber(av[1]) == 1)
-            open_check(av[1]);
+            open_check(av[1], &game);
     }
     else
         ft_error("_/|\\_Oh My Buddha_/|\\_\nARGC ERROR!");
