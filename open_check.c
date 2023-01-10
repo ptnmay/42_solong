@@ -6,19 +6,20 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 04:07:50 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/10 02:26:56 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/11 02:22:00 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void open_check(char *av, gm *game)
+void open_check(char *av, g_gm *game)
 {
     int fd;
     int c;
     //int lencheck;
     char *checkline;
 
+    game->hight = 0;
     fd = open(av, O_RDONLY);
     checkline = get_next_line(fd);
     c = check_five(checkline);
@@ -41,6 +42,7 @@ void open_check(char *av, gm *game)
         game->hight++;
         //printf("c = %d\n", c);
     }
+    printf("high = %d\n", game->hight);
     if (c < 1)
     {
         free(checkline);
@@ -48,4 +50,5 @@ void open_check(char *av, gm *game)
         exit(0);
     }
     free(checkline);
+    close(fd);
 }
