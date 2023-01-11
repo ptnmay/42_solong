@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 14:52:05 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/11 16:00:40 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/11 16:17:34 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,10 @@ void check_wall(g_gm *game)
         }
     }
     printf("==y ok");
+    j = 0;
     while (j < game->len)
     {
-        if (game->twoarray[0][j] == '1' && game->twoarray[game->hight - 1][j] == '1')
+        if ((game->twoarray[0][j] == '1') && (game->twoarray[game->hight - 1][j] == '1'))
         {
             printf("%c", game->twoarray[0][j]);
             printf("%c", game->twoarray[game->hight - 1][j]);
