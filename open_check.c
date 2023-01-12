@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 04:07:50 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/11 02:22:00 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/13 00:09:09 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void open_check(char *av, g_gm *game)
     game->hight = 0;
     fd = open(av, O_RDONLY);
     checkline = get_next_line(fd);
-    c = check_five(checkline);
+    c = check_five(checkline, game);
     //lencheck = ft_strlen_nonl(checkline);
     game->len = ft_strlen_nonl(checkline);
     printf("len = %d\n", game->len);
@@ -38,7 +38,7 @@ void open_check(char *av, g_gm *game)
             free(checkline);
             exit(0);
         }
-        c = check_five(checkline);
+        c = check_five(checkline, game);
         game->hight++;
         //printf("c = %d\n", c);
     }
