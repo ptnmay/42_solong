@@ -6,13 +6,13 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 14:52:05 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/11 16:17:34 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:43:48 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void check_wall(g_gm *game)
+void check_wall(t_gm *game)
 {
     int i;
     int j;

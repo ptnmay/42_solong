@@ -6,13 +6,13 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 03:16:40 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/13 03:42:06 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:43:27 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "so_long.h"
 
-void    ff_namtuam(g_gm *game, char **pantee, int x, int y)
+void    ff_namtuam(t_gm *game, char **mapwalk, int x, int y)
 {
     
 }

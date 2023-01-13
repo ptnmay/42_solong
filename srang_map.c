@@ -6,13 +6,13 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 02:03:29 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/13 00:13:30 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:43:38 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void    srang_map(char *av, g_gm *game)
+void    srang_map(char *av, t_gm *game)
 {
     int fd;
     int i;

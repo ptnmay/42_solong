@@ -6,13 +6,13 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 04:07:50 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/13 00:09:09 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:43:08 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void open_check(char *av, g_gm *game)
+void open_check(char *av, t_gm *game)
 {
     int fd;
     int c;

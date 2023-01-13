@@ -6,13 +6,13 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 03:59:32 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/13 00:12:27 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:42:49 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int check_five(char *checkline, g_gm *game)
+int check_five(char *checkline, t_gm *game)
 {
     int i;
     // static int p;
