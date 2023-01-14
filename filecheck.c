@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/13 16:54:15 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/15 00:29:13 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int main (int ac, char **av)
         {
             open_check(av[1], &game);
             srang_map(av[1], &game);
-           // ff_namtuam(&game, )
+            ff_namtuam(&game, game.copy, game.len, game.hight);
         }
     }
     else
