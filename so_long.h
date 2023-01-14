@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:12:39 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/13 16:42:38 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:18:14 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 typedef struct s_game
 {
     char    **twoarray;
+    char    **copy;
     int hight;
     int len;
     int nabwalk;

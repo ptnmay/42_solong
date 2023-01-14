@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 14:52:05 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/13 16:43:48 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:08:12 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,31 +22,31 @@ void check_wall(t_gm *game)
     {
         if ((game->twoarray[i][0] == '1') && (game->twoarray[i][game->len - 1] == '1'))
         {
-            printf("%c", game->twoarray[i][0]);
-            printf("%c", game->twoarray[i][game->len - 1]);
+            //printf("%c", game->twoarray[i][0]);
+           // printf("%c", game->twoarray[i][game->len - 1]);
             i++;
         }
         else
         {
-            printf("no");
+            //printf("no");
             exit(0);
         }
     }
-    printf("==y ok");
+    //printf("==y ok");
     j = 0;
     while (j < game->len)
     {
         if ((game->twoarray[0][j] == '1') && (game->twoarray[game->hight - 1][j] == '1'))
         {
-            printf("%c", game->twoarray[0][j]);
-            printf("%c", game->twoarray[game->hight - 1][j]);
+            //printf("%c", game->twoarray[0][j]);
+            //printf("%c", game->twoarray[game->hight - 1][j]);
             j++;
         }
         else
         {
-            printf("nono");
+            //printf("nono");
             exit(0);
         }
     }
-    printf("===x ok");
+    //printf("===x ok");
 }

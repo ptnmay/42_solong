@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 02:03:29 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/13 16:43:38 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:18:07 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,26 +25,29 @@ void    srang_map(char *av, t_gm *game)
         exit(0);
     }
     game->twoarray = malloc(sizeof(char *) * (game->hight + 1));
-    // printf("hello");
-    // exit(0);
+    game->copy = malloc(sizeof(char *) * (game->hight + 1));
     i = 0;
     while (i < game->hight)
     {
         game->twoarray[i] = get_next_line(fd);
+        game->copy[i] = game->twoarray[i];
         i++;
     }
-    // i = 0;
-    // while (i < game->hight)
-    // {
-    //     j = 0;
-    //     while (j < game-> len)
-    //     {
-    //         printf("%c", game->twoarray[i][j]);
-    //         j++;
-    //     }
-    //     i++;
-    // }
+    i = 0;
+    while (i < game->hight)
+    {
+        j = 0;
+        while (j < game-> len)
+        {
+            //printf("%c", game->twoarray[i][j]);
+            printf("%c", game->copy[i][j]);
+            j++;
+        }
+        i++;
+    }
     game->twoarray[i] = NULL;
+    game->copy[i] = NULL;
+    //kadleok_map(game);
     check_wall(game);
     close(fd);
 }

@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 03:59:32 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/13 16:42:49 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/14 23:07:51 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ int check_five(char *checkline, t_gm *game)
             game->e++;
         i++;
     }
-    printf("c = %d\n", game->c);
-    printf("e = %d\n", game->e);
-    printf("p = %d\n", game->p);
-    printf("---\n");
+    // printf("c = %d\n", game->c);
+    // printf("e = %d\n", game->e);
+    // printf("p = %d\n", game->p);
+    //printf("---\n");
     if (checkline == NULL && (game->p != 1 || game->e != 1))
     {
         free(checkline);
