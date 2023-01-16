@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:12:39 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 03:02:47 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/16 21:59:58 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ typedef struct s_game
 {
 	char	**twoarray;
 	char	**copy;
-	int	hight;
-	int	len;
+	int	hight; //soong
+	int	len; //yao
 	int	nabwalk;
-	int	c;
-	int	p;
-	int	e;
-	int	p_x;
-	int	p_y;
+	int	c; // before namtuam
+	int	p; // before namtuam
+	int	e; // before namtuam
+	int	p_x; // p position yao
+	int	p_y; // p position soong
 	int	p_ate;
-	int	kept_c;
+	int	kept_c; // c count in namtuam
 }	t_gm;
 
 void	ft_error(char *error);

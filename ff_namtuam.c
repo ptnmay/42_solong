@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 03:16:40 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 03:28:03 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/16 22:15:38 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,18 @@
 
 void	ff_namtuam(t_gm *game, char **mapff, int x, int y)
 {
-	if (x < 0 || y < 0 || x > game->len - 1 || y > game->hight - 1)
-	{
-		return ;
+	int a;
 
+	a = 0;
+	while (mapff[a])
+	{
+		printf("----- %s\n", mapff[a]);
+		a++;
 	}
+	sleep(1);
+	if (x < 0 || y < 0 || x > game->len - 1 || y > game->hight - 1)
+	//x = yao y = soong
+		return ;
 	if (mapff[y][x] && mapff[y][x] == '1')
 		return ;
 	if (mapff[y][x] == 'C')

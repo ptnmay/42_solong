@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 14:52:05 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 02:59:46 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/16 22:01:26 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	check_wall(t_gm *game)
 	int	j;
 
 	i = 0;
+	//check y |
 	while (i < game->hight)
 	{
 		if ((game->twoarray[i][0] == '1') && (game->twoarray[i][game->len - 1] == '1'))
@@ -34,6 +35,7 @@ void	check_wall(t_gm *game)
 	}
 	//printf("==y ok");
 	j = 0;
+	//check x -
 	while (j < game->len)
 	{
 		if ((game->twoarray[0][j] == '1') && (game->twoarray[game->hight - 1][j] == '1'))

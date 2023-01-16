@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 04:07:50 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 02:57:49 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/16 22:04:07 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void open_check(char *av, t_gm *game)
 {
 	int fd;
 	int c;
-	//int lencheck;
 	char *checkline;
 
 	game->hight = 0;
@@ -24,7 +23,6 @@ void open_check(char *av, t_gm *game)
 	fd = open(av, O_RDONLY);
 	checkline = get_next_line(fd);
 	c = check_five(checkline, game);
-	//lencheck = ft_strlen_nonl(checkline);
 	game->len = ft_strlen_nonl(checkline);
 	//printf("len = %d\n", game->len);
 	while (checkline)
@@ -47,7 +45,7 @@ void open_check(char *av, t_gm *game)
 	if (c < 1)
 	{
 		free(checkline);
-		ft_error("collectible eob seo");
+		ft_error("mei you collectible");
 		exit(0);
 	}
 	free(checkline);

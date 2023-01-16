@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 03:59:32 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 03:01:19 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/16 22:02:57 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 int	check_five(char *checkline, t_gm *game)
 {
 	int	i;
-	// static int p;
-	// static int e;
-	// static int c;
 
 	i = 0;
 	while (checkline != NULL && checkline[i] != '\0' && checkline[i] != '\n')
@@ -45,7 +42,7 @@ int	check_five(char *checkline, t_gm *game)
 	{
 		free(checkline);
 		ft_error("Check Your Map");
-	exit(0);
+		exit(0);
 	}
 	return (game->c);
 }

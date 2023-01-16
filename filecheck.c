@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 03:16:10 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/16 22:24:49 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,25 +51,30 @@ int main (int ac, char **av)
 			game->kept_c = 0;
 			open_check(av[1], game);
 			srang_map(av[1], game);
-			//	find P position
 			p_u_nee(game);
-			printf("k\n");
 			ff_namtuam(game, game->copy, game->p_x, game->p_y);
-			//---------------
-			while (i < game->hight)
-			{
-				j = 0;
-				while (j < game->len)
-				{
-					//printf("%c", game->twoarray[i][j]);
-					//printf("%c", game->copy[i][j]);
-					j++;
-				}
-				i++;
-			}
-			printf("ate c = %d\n", game->kept_c);
+			//-------print-after-ff------
+			// while (i < game->hight)
+			// {
+			// 	j = 0;
+			// 	while (j < game->len)
+			// 	{
+			// 		//printf("%c", game->twoarray[i][j]);
+			// 		//printf("%c", game->copy[i][j]);
+			// 		j++;
+			// 	}
+			// 	i++;
+			// }
+			// printf("ate c = %d\n", game->kept_c);
 			//----------------
 		}
+		if (game->c != game->kept_c)
+		{
+			free(game);
+			ft_error("cannot eat C");
+			exit(0);
+		}
+
 	}
 	else
 		ft_error("_/|\\_Oh My Buddha_/|\\_\nARGC ERROR!");
