@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 03:16:40 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 22:15:38 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/16 23:36:09 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,17 @@ void	ff_namtuam(t_gm *game, char **mapff, int x, int y)
 	ff_namtuam(game, mapff, x, y + 1); //down
 	ff_namtuam(game, mapff, x - 1, y); //left
 	ff_namtuam(game, mapff, x + 1, y); //right
+}
+
+void	independent_map(t_gm *game)
+{
+	int	x_len;
+
+	x_len = 0;
+	while (x_len < game->hight)
+	{
+		free(game->copy[x_len]);
+		x_len++;
+	}
+	free(game->copy);
 }
