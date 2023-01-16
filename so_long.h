@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:12:39 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 23:36:37 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/17 00:01:53 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <fcntl.h>
-# include “mlx.h”
 
 # include "./get_next_line/get_next_line_bonus.h"
 # include "./libft/libft.h"
+# include "./minilibx/mlx.h"
 
 typedef struct s_game
 {

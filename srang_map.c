@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 02:03:29 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 21:50:30 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/16 23:51:38 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,20 @@ void	srang_map(char *av, t_gm *game)
 		game->copy[i] = game->twoarray[i];
 		i++;
 	}
+	//----printf-map----
 	// i = 0;
 	// while (i < game->hight)
 	// {
 	//     j = 0;
 	//     while (j < game-> len)
 	//     {
-	//         //printf("%c", game->twoarray[i][j]);
-	//         printf("%c", game->copy[i][j]);
+	//         printf("%c", game->twoarray[i][j]);
+	//         //printf("%c", game->copy[i][j]);
 	//         j++;
 	//     }
 	//     i++;
 	// }
+	//--------------------
 	game->twoarray[i] = NULL;
 	game->copy[i] = NULL;
 	check_wall(game);

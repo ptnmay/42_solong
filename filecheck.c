@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 23:38:12 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/17 00:00:45 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int main (int ac, char **av)
 			// 	j = 0;
 			// 	while (j < game->len)
 			// 	{
-			// 		//printf("%c", game->twoarray[i][j]);
+			// 		printf("%c", game->twoarray[i][j]);
 			// 		//printf("%c", game->copy[i][j]);
 			// 		j++;
 			// 	}
@@ -75,7 +75,7 @@ int main (int ac, char **av)
 			exit(0);
 		}
 		independent_map(game);
-		
+		mlx_new_window
 	}
 	else
 		ft_error("_/|\\_Oh My Buddha_/|\\_\nARGC ERROR!");
