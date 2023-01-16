@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/17 00:00:45 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/17 00:15:48 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int main (int ac, char **av)
 			exit(0);
 		}
 		independent_map(game);
-		mlx_new_window
+		//mlx_new_window
 	}
 	else
 		ft_error("_/|\\_Oh My Buddha_/|\\_\nARGC ERROR!");
