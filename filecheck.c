@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 22:24:49 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/16 22:37:37 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int main (int ac, char **av)
 		if (game->c != game->kept_c)
 		{
 			free(game);
-			ft_error("cannot eat C");
+			ft_error("cannot eat all C");
 			exit(0);
 		}
 
