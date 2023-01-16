@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:12:39 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/17 04:25:00 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/17 04:41:58 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 # include "./libft/libft.h"
 # include "./minilibx/mlx.h"
 
-typedef struct s_mlx
-{
-	int	kept_c;
-	int	nabwalk;
-}
+// typedef struct s_mlx
+// {
+// 	int	kept_c;
+// 	int	nabwalk;
+// }
 
 
 typedef struct s_game
