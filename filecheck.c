@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/17 01:16:01 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/17 04:23:45 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int main (int ac, char **av)
 		if (checkber(av[1]) == 1)
 		{
 			game = (t_gm *)malloc(sizeof(t_gm));
-			game->kept_c = 0;
+			game->namtuam_c = 0;
 			open_check(av[1], game);
 			srang_map(av[1], game);
 			p_u_nee(game);
@@ -68,7 +68,7 @@ int main (int ac, char **av)
 			// printf("ate c = %d\n", game->kept_c);
 			//----------------
 		}
-		if (game->c != game->kept_c)
+		if (game->c != game->namtuam_c)
 		{
 			independent_map(game);
 			ft_error("cannot eat all C");

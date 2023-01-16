@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 03:16:40 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 23:49:01 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/17 04:22:29 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ff_namtuam(t_gm *game, char **mapff, int x, int y)
 	if (mapff[y][x] && mapff[y][x] == '1')
 		return ;
 	if (mapff[y][x] == 'C')
-		game->kept_c++;
+		game->namtuam_c++;
 	game->copy[y][x] = '1';
 	ff_namtuam(game, mapff, x, y - 1); //up
 	ff_namtuam(game, mapff, x, y + 1); //down

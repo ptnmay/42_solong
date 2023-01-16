@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:12:39 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/17 01:15:09 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/17 04:25:00 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,26 @@
 # include "./libft/libft.h"
 # include "./minilibx/mlx.h"
 
+typedef struct s_mlx
+{
+	int	kept_c;
+	int	nabwalk;
+}
+
+
 typedef struct s_game
 {
+
 	char	**twoarray; //map1
 	char	**copy; //cpoy map
 	int	hight; //soong
 	int	len; //yao
-	int	nabwalk;
 	int	c; // before namtuam
 	int	p; // before namtuam
 	int	e; // before namtuam
 	int	p_x; // p position yao
 	int	p_y; // p position soong
-	int	p_ate;
-	int	kept_c; // c count in namtuam
+	int	namtuam_c; // c count in namtuam
 }	t_gm;
 
 void	ft_error(char *error);
