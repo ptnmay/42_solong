@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 02:41:03 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 22:14:28 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 04:47:08 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,9 @@ void	p_u_nee(t_gm *game)
 			{
 				game->p_y = y;
 				game->p_x = x;
-				//printf("x = %d y = %d\n", game->p_x ,game->p_y);
 			}
 			x++;
 		}
 		y++;
 	}
-	//printf("y = %d\n x = %d\n", game->p_x, game->p_y);
 }

@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 00:37:40 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/18 03:36:28 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 04:05:13 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ void	render(t_gm *game)
 		}
 		y++;
 	}
+	mlx_key_hook(mlxx->window, zou, &mlxx);
 	mlx_loop(mlxx->mlx);
-	//mlx_put_image_to_window(mlxx->mlx, mlxx->window, mlxx->wall, (game->len * 64), (game->hight * 64));
 }
