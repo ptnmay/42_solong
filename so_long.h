@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:12:39 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/18 04:47:05 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 05:04:309 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,23 @@
 
 #endif
 
+
+
+typedef struct s_game
+{
+	char	**twoarray; //map1
+	char	**copy; //cpoy map
+	int	hight; //soong
+	int	len; //yao
+	int	c; // before namtuam
+	int	p; // before namtuam
+	int	e; // before namtuam
+	int	p_x; // p position yao
+	int	p_y; // p position soong
+	int	namtuam_c; // c count in namtuam
+	int	collect_c;
+}	t_gm;
+
 typedef struct s_mlx
 {
 	int	kept_c;
@@ -71,24 +88,8 @@ typedef struct s_mlx
 	void	*player;
 	void	*exit;
 	void	*field;
+	t_gm	*mlxxx;
 }	t_mx;
-
-
-typedef struct s_game
-{
-
-	char	**twoarray; //map1
-	char	**copy; //cpoy map
-	int	hight; //soong
-	int	len; //yao
-	int	c; // before namtuam
-	int	p; // before namtuam
-	int	e; // before namtuam
-	int	p_x; // p position yao
-	int	p_y; // p position soong
-	int	namtuam_c; // c count in namtuam
-	// int	collect_c;
-}	t_gm;
 
 void	ft_error(char *error);
 void	open_check(char *av, t_gm *game);
@@ -99,7 +100,7 @@ void	ff_namtuam(t_gm *game,char **mapff, int x, int y);
 void	independent_map(t_gm *game);
 void	render(t_gm *game);
 void	zou(int kc, t_mx *mlxx);
-int	check_zou(t_mx *mlxx, t_gm *gm, int x, int y);
+int	check_zou(t_mx *mlxx, char **map, int x, int y);
 int	check_five(char *checkline, t_gm *game);
 int	checkber(char *av);
 int	ft_strlen_nonl(char *s);

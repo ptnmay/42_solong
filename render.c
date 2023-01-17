@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 00:37:40 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/18 04:05:13 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 05:28:110 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,18 @@ void	render(t_gm *game)
 	mlxx = malloc(sizeof(t_mx));
 	mlxx->mlx = mlx_init();
 	mlxx->window = mlx_new_window(mlxx->mlx, (game->len * 64), game->hight * 64, "so_long");
+	mlxx->mlxxx = game;
+	// printf("px = %d, py = %d\n", game->p_x, game->p_y);
+	// mlxx->mlxxx->p_x = game->p_x;
+	// mlxx->mlxxx->p_y = game->p_y;
+	// wrong here wrong value for p_x p_y when pass to function
+	printf("mlx x = %d, mlx y = %d\n", mlxx->mlxxx->p_x, mlxx->mlxxx->p_y);
 	init_photo(game, mlxx);
 	while (game->twoarray[y])
 	{
 		x = 0;
 		while (game->twoarray[y][x] != '\n' && game->twoarray[y][x] != '\0')
 		{
-			printf("x = %d ,y = %d\n", x, y);
 			if (game->twoarray[y][x] == '1')
 			 	mlx_put_image_to_window(mlxx->mlx, mlxx->window, mlxx->wall, x * 64, y * 64);
 			if (game->twoarray[y][x] == '0' || game->twoarray[y][x] == 'P' || game->twoarray[y][x] == 'E')

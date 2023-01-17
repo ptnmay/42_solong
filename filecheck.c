@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/18 03:21:36 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 05:25:554 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,21 +52,18 @@ int main (int ac, char **av)
 			open_check(av[1], game);
 			srang_map(av[1], game);
 			p_u_nee(game);
+			// printf("p_x = %d, p_y = %d\n", game->p_x, game->p_y);
 			ff_namtuam(game, game->copy, game->p_x, game->p_y);
-			//-------print-after-ff------
 			while (i < game->hight)
 			{
 				j = 0;
 				while (j < game->len)
 				{
 					printf("%c", game->twoarray[i][j]);
-					//printf("%c", game->copy[i][j]);
 					j++;
 				}
 				i++;
 			}
-			//printf("ate c = %d\n", game->kept_c);
-			//----------------
 		}
 		if (game->c != game->namtuam_c)
 		{

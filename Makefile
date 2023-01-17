@@ -16,7 +16,7 @@ OBJ = $(SRC:.c=.o)
 all : $(NAME)
 
 $(NAME) : $(LIBFT) $(MLX) $(OBJ)
-		$(CC) $(MLX_FLAGS) $(OBJ) $(LIBFT) $(MLX) -o $(NAME)
+		$(CC) $(MLX_FLAGS) $(OBJ) $(LIBFT) $(MLX) -o $(NAME) 2> /dev/null
 
 $(LIBFT) :
 			make -C $(LIBFT_PATH)

@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 04:07:50 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/18 02:23:48 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 05:16:109 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,12 @@ void open_check(char *av, t_gm *game)
 	checkline = get_next_line(fd);
 	c = check_five(checkline, game);
 	game->len = ft_strlen_nonl(checkline);
-	//printf("len = %d\n", game->len);
 	game->c = 0;
 	game->e = 0;
 	while (checkline)
 	{
 		free(checkline);
 		checkline = get_next_line(fd);
-		//printf("gnl checkline = %s\n", checkline);
-		//if (lencheck != ft_strlen_nonl(checkline) && checkline != NULL)
 		if (game->len != ft_strlen_nonl(checkline) && checkline != NULL)
 		{
 			ft_error("see liam a ni ya");
@@ -41,9 +38,7 @@ void open_check(char *av, t_gm *game)
 		}
 		c = check_five(checkline, game);
 		game->hight++;
-		//printf("c = %d\n", c);
 	}
-	//printf("high = %d\n", game->hight);
 	if (c < 1)
 	{
 		free(checkline);

@@ -6,28 +6,30 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 03:59:18 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/18 04:51:35 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 04:55:443 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"so_long.h"
 
-int	check_zou(t_mx *mlxx, t_gm *game,int x, int y)
+int	check_zou(t_mx *mlxx, char **map,int x, int y)
 {
-	if (game->twoarray[y][x] == '1')
+	if (map[y][x] == '1')
 		return (0);
-	else if (game->twoarray[y][x] == 'C')
+	else if (map[y][x] == 'C')
 	{
-		game->twoarray[y][x] = '0';
-		game->collect_c++;
+		map[y][x] = '0';
+		mlxx->mlxxx->collect_c++;
+		return (1);
 	}
-	else if (game->twoarray[y][x] == 'E')
+	else if (map[y][x] == 'E')
 	{
-		if (game->collect == game->collect_max)
+		if (mlxx->mlxxx->collect_c == mlxx->mlxxx->c)
 		{
-			mlx_destroy_window(mlxx->mlx, mlxx->win);
+			mlx_destroy_window(mlxx->mlx, mlxx->window);
 			exit(0);
 		}
+		return (1);
 	}
 }
 
@@ -36,12 +38,29 @@ void	zou(int kc, t_mx *mlxx)
 	int	x;
 	int	y;
 
-	// x = game.p_x;
-	// y = game.p_y;
-	if (kc == KEY_A)
-	{
-		if (check_zou(mlxx, &game, x - 1, y))
+	x = mlxx->mlxxx->p_x;
+	y = mlxx->mlxxx->p_y;
+	printf("x = %d, y = %d\n", x, y);
+	printf("mx x = %d, mx y = %d\n", mlxx->mlxxx->p_x, mlxx->mlxxx->p_y);
+	// if (kc == KEY_ESC)
+	// {
+	// 	mlx_destroy_image(mlxx->mlx, mlxx->wall);
+	// 	mlx_destroy_image(mlxx->mlx, mlxx->player);
+	// 	mlx_destroy_image(mlxx->mlx, mlxx->collect);
+	// 	mlx_destroy_image(mlxx->mlx, mlxx->exit);
+	// 	mlx_destroy_window(mlxx->mlx, mlxx->window);
+	// 	exit(EXIT_SUCCESS);
+	// }
+	// if (kc == KEY_A)
+	// {
+	// 	if (check_zou(mlxx, mlxx->mlxxx->twoarray, x, y - 1))
+	// 	{
+	// 		x--;
+	// 		mlxx->mlxxx->p_x = x;
 
-	}
+	// 		exit(EXIT_SUCCESS);
+	// 	}
+	// 	// printf("dern mai dai\n");
+	// }
 }
 
