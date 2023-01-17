@@ -6,11 +6,11 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 16:53:21 by psaeyang          #+#    #+#             */
-/*   Updated: 2022/12/27 13:44:42 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 01:57:38 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "libft.h"
 
 size_t	ft_strlen_n(const char *s, char c)
 {

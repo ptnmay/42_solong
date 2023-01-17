@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 02:03:29 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/16 23:51:38 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 03:33:54 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	srang_map(char *av, t_gm *game)
 	int	fd;
 	int	i;
 	int	j;
+	char	*tmp;
 
 	fd = open(av, O_RDONLY);
 	if (fd < 0)
@@ -29,8 +30,9 @@ void	srang_map(char *av, t_gm *game)
 	i = 0;
 	while (i < game->hight)
 	{
-		game->twoarray[i] = get_next_line(fd);
-		game->copy[i] = game->twoarray[i];
+		tmp = get_next_line(fd);
+		game->twoarray[i] = tmp;
+		game->copy[i] = ft_strdup(tmp);
 		i++;
 	}
 	//----printf-map----
@@ -49,6 +51,6 @@ void	srang_map(char *av, t_gm *game)
 	//--------------------
 	game->twoarray[i] = NULL;
 	game->copy[i] = NULL;
-	check_wall(game);
 	close(fd);
+	check_wall(game);
 }

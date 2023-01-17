@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 23:14:19 by psaeyang          #+#    #+#             */
-/*   Updated: 2022/12/27 13:44:01 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 01:57:15 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,20 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
+# include <limits.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
+char	*get_next_line(int fd);
+char	*get_this_line(char *keep);
+char	*keep_this_line(char *keep, int rslen);
+char	*ft_strjoin_gnl(char *s1, char *s2);
+char	*readfile(int fd, char *keep);
+size_t	ft_strlen_n(const char *s, char c);
+int		ft_find_n(char *s);
 
 typedef struct s_list
 {

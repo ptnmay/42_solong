@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:12:39 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/17 04:41:58 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 02:37:35 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,22 @@
 # include <stdio.h>
 # include <fcntl.h>
 
-# include "./get_next_line/get_next_line_bonus.h"
 # include "./libft/libft.h"
-# include "./minilibx/mlx.h"
+# include "./MLX/mlx.h"
 
-// typedef struct s_mlx
-// {
-// 	int	kept_c;
-// 	int	nabwalk;
-// }
+typedef struct s_mlx
+{
+	int	kept_c;
+	int	nabwalk;
+	void	*img;
+	void	*mlx;
+	void	*window;
+	void	*wall;
+	void	*collect;
+	void	*player;
+	void	*exit;
+	void	*field;
+}	t_mx;
 
 
 typedef struct s_game
@@ -51,6 +58,7 @@ void	check_wall(t_gm *game);
 void	p_u_nee(t_gm *game);
 void	ff_namtuam(t_gm *game,char **mapff, int x, int y);
 void	independent_map(t_gm *game);
+void	render(t_gm *game);
 int	check_five(char *checkline, t_gm *game);
 int	checkber(char *av);
 int	ft_strlen_nonl(char *s);

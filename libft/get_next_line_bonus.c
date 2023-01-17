@@ -6,11 +6,11 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 19:56:13 by psaeyang          #+#    #+#             */
-/*   Updated: 2022/12/27 13:45:36 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/18 01:57:29 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "libft.h"
 
 char	*keep_this_line(char *keep, int rslen)
 {
@@ -20,7 +20,7 @@ char	*keep_this_line(char *keep, int rslen)
 	{
 		free (keep);
 		return (NULL);
-	}	
+	}
 	tmp = malloc(1);
 	if (!tmp)
 		return (NULL);
@@ -117,8 +117,8 @@ int	main(void)
 	line = NULL;
 	fd = open("/Users/psaeyang/get_next_line/test/files/42_with_nl", O_RDONLY);
 
-	while(i < 2) 
-	{		
+	while(i < 2)
+	{
 		line = get_next_line(fd);
 		printf("line %d ----|%s|\n", i, line);
 		free(line);

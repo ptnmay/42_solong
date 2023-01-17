@@ -6,7 +6,7 @@
 #    By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/15 22:28:52 by psaeyang          #+#    #+#              #
-#    Updated: 2022/08/12 02:36:41 by psaeyang         ###   ########.fr        #
+#    Updated: 2023/01/18 01:59:22 by psaeyang         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,9 @@ SRC = ft_isalnum.c \
       ft_putendl_fd.c \
       ft_putnbr_fd.c \
       ft_putstr_fd.c \
-      ft_split.c
+      ft_split.c \
+      get_next_line_bonus.c \
+      get_next_line_utils_bonus.c
 
 BONUS_SRC = ft_lstnew.c \
 	    ft_lstadd_front.c \
@@ -57,7 +59,7 @@ BONUS_SRC = ft_lstnew.c \
 	    ft_lstdelone.c \
 	    ft_lstclear.c \
 	    ft_lstiter.c \
-	    ft_lstmap.c
+	    ft_lstmap.c \
 
 OBJS = $(SRC:.c=.o)
 
