@@ -4,7 +4,7 @@ CC = gcc
 CFLAGS = #-g -Wall -Werror -Wextra
 HEADER = so_long.h
 MLX_FLAGS = -LMLX -lMLX  -framework OpenGL -framework AppKit
-
+RM = rm
 LIBFT_PATH = libft
 LIBFT = $(LIBFT_PATH)/libft.a
 
@@ -32,7 +32,7 @@ $(MLX) :
 clean:
 	@make -C $(LIBFT_PATH) clean
 	@make -C $(MLX_PATH) clean
-	@$(RM) $(OBJS)
+	@$(RM) $(OBJ)
 
 fclean: clean
 	@make -C $(LIBFT_PATH) fclean
