@@ -41,8 +41,8 @@ int main (int ac, char **av)
 	t_gm *game;
 	int i;
 	int j;
+	
 	i = 0;
-
 	if (ac == 2)
 	{
 		if (checkber(av[1]) == 1)
@@ -52,18 +52,21 @@ int main (int ac, char **av)
 			open_check(av[1], game);
 			srang_map(av[1], game);
 			p_u_nee(game);
-			// printf("p_x = %d, p_y = %d\n", game->p_x, game->p_y);
 			ff_namtuam(game, game->copy, game->p_x, game->p_y);
-			while (i < game->hight)
-			{
-				j = 0;
-				while (j < game->len)
-				{
-					printf("%c", game->twoarray[i][j]);
-					j++;
-				}
-				i++;
-			}
+			me_e_mai(game);
+			//----print-map----
+			// while (i < game->hight)
+			// {
+			// 	j = 0;
+			// 	while (j < game->len)
+			// 	{
+			// 		printf("%c", game->copy[i][j]);
+			// 		j++;
+			// 	}
+			// 	printf("\n");
+			// 	i++;
+			// }
+			//----printf-map----
 		}
 		if (game->c != game->namtuam_c)
 		{
@@ -72,6 +75,7 @@ int main (int ac, char **av)
 			exit(0);
 		}
 		independent_map(game);
+		game->collect_c = 0;
 		render(game);
 	}
 	else

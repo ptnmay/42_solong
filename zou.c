@@ -12,8 +12,10 @@
 
 #include	"so_long.h"
 
-int	check_zou(t_mx *mlxx, char **map,int x, int y)
+int	check_zou(t_mx *mlxx, char **map, int x, int y)
 {
+	if (map[y][x] == '0' || map[y][x] == 'P')
+		return (1);
 	if (map[y][x] == '1')
 		return (0);
 	else if (map[y][x] == 'C')
@@ -24,6 +26,8 @@ int	check_zou(t_mx *mlxx, char **map,int x, int y)
 	}
 	else if (map[y][x] == 'E')
 	{
+		if (mlxx->mlxxx->collect_c != mlxx->mlxxx->c)
+			return (0);
 		if (mlxx->mlxxx->collect_c == mlxx->mlxxx->c)
 		{
 			mlx_destroy_window(mlxx->mlx, mlxx->window);
@@ -31,6 +35,7 @@ int	check_zou(t_mx *mlxx, char **map,int x, int y)
 		}
 		return (1);
 	}
+	return (0);
 }
 
 void	zou(int kc, t_mx *mlxx)
@@ -40,27 +45,54 @@ void	zou(int kc, t_mx *mlxx)
 
 	x = mlxx->mlxxx->p_x;
 	y = mlxx->mlxxx->p_y;
-	printf("x = %d, y = %d\n", x, y);
-	printf("mx x = %d, mx y = %d\n", mlxx->mlxxx->p_x, mlxx->mlxxx->p_y);
-	// if (kc == KEY_ESC)
-	// {
-	// 	mlx_destroy_image(mlxx->mlx, mlxx->wall);
-	// 	mlx_destroy_image(mlxx->mlx, mlxx->player);
-	// 	mlx_destroy_image(mlxx->mlx, mlxx->collect);
-	// 	mlx_destroy_image(mlxx->mlx, mlxx->exit);
-	// 	mlx_destroy_window(mlxx->mlx, mlxx->window);
-	// 	exit(EXIT_SUCCESS);
-	// }
-	// if (kc == KEY_A)
-	// {
-	// 	if (check_zou(mlxx, mlxx->mlxxx->twoarray, x, y - 1))
-	// 	{
-	// 		x--;
-	// 		mlxx->mlxxx->p_x = x;
-
-	// 		exit(EXIT_SUCCESS);
-	// 	}
-	// 	// printf("dern mai dai\n");
-	// }
+	if (kc == KEY_ESC)
+	{
+		mlx_destroy_image(mlxx->mlx, mlxx->wall);
+		mlx_destroy_image(mlxx->mlx, mlxx->player);
+		mlx_destroy_image(mlxx->mlx, mlxx->collect);
+		mlx_destroy_image(mlxx->mlx, mlxx->exit);
+		mlx_destroy_window(mlxx->mlx, mlxx->window);
+		exit(EXIT_SUCCESS);
+	}
+	if (kc == KEY_A || kc == 123) //left
+	{
+		if (check_zou(mlxx, mlxx->mlxxx->twoarray, x - 1, y))
+		{
+			mlx_put_image_to_window(mlxx->mlx, mlxx->window, mlxx->field, (x * 64), (y * 64));
+			x--;
+			mlx_put_image_to_window(mlxx->mlx, mlxx->window, mlxx->player, (x * 64), (y * 64));
+			mlxx->mlxxx->p_x = x;
+		}
+	}
+	if (kc == KEY_D || kc == 124) //down
+	{
+		if (check_zou(mlxx, mlxx->mlxxx->twoarray, x + 1, y))
+		{
+			mlx_put_image_to_window(mlxx->mlx, mlxx->window, mlxx->field, (x * 64), (y * 64));
+			x++;
+			mlx_put_image_to_window(mlxx->mlx, mlxx->window, mlxx->player, (x * 64), (y *64));
+			mlxx->mlxxx->p_x = x;
+		}
+	}
+	if (kc == KEY_W || kc == 126) //up
+	{
+		if (check_zou(mlxx, mlxx->mlxxx->twoarray, x, y - 1))
+		{
+			mlx_put_image_to_window(mlxx->mlx, mlxx->window, mlxx->field, (x * 64), (y * 64));
+			y--;
+			mlx_put_image_to_window(mlxx->mlx, mlxx->window, mlxx->player, (x * 64), (y * 64));
+			mlxx->mlxxx->p_y = y;
+		}
+	}
+	if (kc == KEY_S || kc == 125) //right
+	{
+		if (check_zou(mlxx, mlxx->mlxxx->twoarray, x, y + 1))
+		{
+			mlx_put_image_to_window(mlxx->mlx, mlxx->window, mlxx->field, (x * 64), (y * 64));
+			y++;
+			mlx_put_image_to_window(mlxx->mlx, mlxx->window, mlxx->player, (x * 64), (y * 64));
+			mlxx->mlxxx->p_y = y;
+		}
+	}
 }
 

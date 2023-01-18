@@ -26,6 +26,7 @@ void open_check(char *av, t_gm *game)
 	game->len = ft_strlen_nonl(checkline);
 	game->c = 0;
 	game->e = 0;
+	game->p = 0;
 	while (checkline)
 	{
 		free(checkline);

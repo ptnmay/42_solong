@@ -100,6 +100,7 @@ void	ff_namtuam(t_gm *game,char **mapff, int x, int y);
 void	independent_map(t_gm *game);
 void	render(t_gm *game);
 void	zou(int kc, t_mx *mlxx);
+void	me_e_mai(t_gm *game);
 int	check_zou(t_mx *mlxx, char **map, int x, int y);
 int	check_five(char *checkline, t_gm *game);
 int	checkber(char *av);

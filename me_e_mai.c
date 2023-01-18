@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   p_u_nee.c                                          :+:      :+:    :+:   */
+/*   me_e_mai.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 02:41:03 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/18 23:18:36 by psaeyang         ###   ########.fr       */
+/*   Created: 2023/01/19 02:15:19 by psaeyang          #+#    #+#             */
+/*   Updated: 2023/01/19 02:31:18 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	p_u_nee(t_gm *game)
+void	me_e_mai(t_gm *game)
 {
 	int	x;
 	int	y;
 
+	x = 0;
 	y = 0;
-	while (y < game->hight - 1) //is |
+	while (game->copy[y])
 	{
 		x = 0;
-		while (x < game->len - 1) //is -
+		while (game->copy[y][x])
 		{
-			if (game->copy[y][x] && game->copy[y][x] == 'P')
+			//printf("y = %d x = %d\n", y, x);
+			if (game->copy[y][x] == 'E')
 			{
-				game->p_y = y;
-				game->p_x = x;
+				ft_error("exit mai dai ka\n");
+				independent_map(game);
+				exit(0);
 			}
 			x++;
 		}
