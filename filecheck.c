@@ -6,15 +6,25 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/18 05:25:554 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/20 02:18:01 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int ft_strlen_nonl(char *s)
+void	check_c(t_gm *game)
 {
-	int i;
+	if (game->c != game->namtuam_c)
+	{
+		independent_map(game);
+		ft_error("cannot eat all C");
+		exit(0);
+	}
+}
+
+int	ft_strlen_nonl(char *s)
+{
+	int	i;
 
 	i = 0;
 	if (s == NULL)
@@ -36,12 +46,11 @@ int	checkber(char *av)
 	return (0);
 }
 
-int main (int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_gm *game;
-	int i;
-	int j;
-	
+	t_gm	*game;
+	int		i;
+
 	i = 0;
 	if (ac == 2)
 	{
@@ -51,29 +60,10 @@ int main (int ac, char **av)
 			game->namtuam_c = 0;
 			open_check(av[1], game);
 			srang_map(av[1], game);
-			p_u_nee(game);
 			ff_namtuam(game, game->copy, game->p_x, game->p_y);
 			me_e_mai(game);
-			//----print-map----
-			// while (i < game->hight)
-			// {
-			// 	j = 0;
-			// 	while (j < game->len)
-			// 	{
-			// 		printf("%c", game->copy[i][j]);
-			// 		j++;
-			// 	}
-			// 	printf("\n");
-			// 	i++;
-			// }
-			//----printf-map----
 		}
-		if (game->c != game->namtuam_c)
-		{
-			independent_map(game);
-			ft_error("cannot eat all C");
-			exit(0);
-		}
+		check_c(game);
 		independent_map(game);
 		game->collect_c = 0;
 		render(game);

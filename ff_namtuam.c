@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ff_namtuam.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsirikam <bsirikam@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 03:16:40 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/18 05:44:5 by bsirikam         ###   ########.fr       */
+/*   Updated: 2023/01/20 02:02:21 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	ff_namtuam(t_gm *game, char **mapff, int x, int y)
 	if (mapff[y][x] == 'C')
 		game->namtuam_c++;
 	game->copy[y][x] = '1';
-	ff_namtuam(game, mapff, x, y - 1); //up
-	ff_namtuam(game, mapff, x, y + 1); //down
-	ff_namtuam(game, mapff, x - 1, y); //left
-	ff_namtuam(game, mapff, x + 1, y); //right
+	ff_namtuam(game, mapff, x, y - 1);
+	ff_namtuam(game, mapff, x, y + 1);
+	ff_namtuam(game, mapff, x - 1, y);
+	ff_namtuam(game, mapff, x + 1, y);
 }
 
 void	independent_map(t_gm *game)

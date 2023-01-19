@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 02:03:29 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/19 03:45:33 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/19 23:35:20 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	srang_map(char *av, t_gm *game)
 {
-	int	fd;
-	int	i;
+	int		fd;
+	int		i;
 	char	*tmp;
 
 	fd = open(av, O_RDONLY);
@@ -37,4 +37,5 @@ void	srang_map(char *av, t_gm *game)
 	game->copy[i] = NULL;
 	close(fd);
 	check_wall(game);
+	p_u_nee(game);
 }

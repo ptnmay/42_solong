@@ -6,11 +6,17 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 03:59:32 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/19 03:28:23 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/20 02:29:19 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+void	independent(char *checkline)
+{
+	free(checkline);
+	exit(0);
+}
 
 int	check_five(char *checkline, t_gm *game)
 {
@@ -21,9 +27,8 @@ int	check_five(char *checkline, t_gm *game)
 	{
 		if (ft_strchr("01CEP\n", checkline[i]) == NULL)
 		{
-			free (checkline);
-			ft_error("it's not what i want");
-			exit(0);
+			ft_error("there is sth i don't want");
+			independent(checkline);
 		}
 		if (checkline[i] == 'P')
 			game->p++;
@@ -35,9 +40,8 @@ int	check_five(char *checkline, t_gm *game)
 	}
 	if (checkline == NULL && (game->p != 1 || game->e != 1))
 	{
-		free(checkline);
-		ft_error("Check Your Map");
-		exit(0);
+		ft_error("check P or E");
+		independent(checkline);
 	}
 	return (game->c);
 }
