@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 03:59:18 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/20 05:35:55 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/20 18:26:31 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,12 @@ int	check_zou(t_mx *mlxx, char **map, int x, int y)
 		}
 		if (map[y][x] == 'E')
 		{
-			if (mlxx->mlxxx->collect_c != mlxx->mlxxx->c)
-				return (0);
+			//  if (mlxx->mlxxx->collect_c != mlxx->mlxxx->c)
+			// 	return (0);
 			if (mlxx->mlxxx->collect_c == mlxx->mlxxx->c)
 				tamlai_window(mlxx);
 		}
+		//printf("%s\n", map[2]);
 		nab_walk(mlxx);
 		return (1);
 	}
