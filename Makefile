@@ -11,19 +11,21 @@ LIBFT = $(LIBFT_PATH)/libft.a
 MLX_PATH = MLX
 MLX = $(MLX_PATH)/libmlx.a
 
-SRC = filecheck.c check_five.c open_check.c srang_map.c check_wall.c ff_namtuam.c p_u_nee.c render.c zou.c me_e_mai.c kod_pum.c
+SRC = filecheck.c check_five.c open_check.c srang_map.c check_wall.c ff_namtuam.c p_u_nee.c me_e_mai.c
 OBJ = $(SRC:.c=.o)
 all : $(NAME)
 
+# $(NAME) : $(LIBFT) $(OBJ)
+# 		$(CC) $(MLX_FLAGS) $(OBJ) $(LIBFT) $(MLX) -o $(NAME) -g
 $(NAME) : $(LIBFT) $(OBJ)
-		$(CC) $(MLX_FLAGS) $(OBJ) $(LIBFT) $(MLX) -o $(NAME)
+		$(CC) $(OBJ) $(LIBFT) -o $(NAME) -g
 
 $(LIBFT) :
 			make -C $(LIBFT_PATH)
 
 
 %.o: %.c $(HEADER)
-	@$(CC) $(CFLAGS) -IMLX -c $< -o $@
+	@$(CC) -IMLX -c $< -o $@
 
 clean:
 	@make -C $(LIBFT_PATH) clean

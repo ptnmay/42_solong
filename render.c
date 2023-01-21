@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 00:37:40 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/21 23:17:37 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/22 03:14:01 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,27 +58,28 @@ void	init_photo(t_gm *game, t_mx *mlxx)
 
 void	render(t_gm *game)
 {
-	t_mx	*mlxx;
-	int		x;
-	int		y;
+	(void)game;
+	// t_mx	*mlxx;
+	// int		x;
+	// int		y;
 
-	y = 0;
-	mlxx = mairu();
-	mlxx->window = mlx_new_window(mlxx->mlx, (game->len * 64), \
-	game->hight * 64, "so_long");
-	mlxx->mlxxx = game;
-	init_photo(game, mlxx);
-	while (game->twoarray[y])
-	{
-		x = 0;
-		while (game->twoarray[y][x] != '\n' && game->twoarray[y][x] != '\0')
-		{
-			if_in_render(game, mlxx, x, y);
-			x++;
-		}
-		y++;
-	}
-	mlx_hook(mlxx->window, 17, 0L, tamlai_window, mlxx);
-	mlx_key_hook(mlxx->window, zou, mlxx);
-	mlx_loop(mlxx->mlx);
+	// y = 0;
+	// mlxx = mairu();
+	// mlxx->window = mlx_new_window(mlxx->mlx, (game->len * 64), \
+	// game->hight * 64, "so_long");
+	// mlxx->mlxxx = game;
+	// init_photo(game, mlxx);
+	// while (game->twoarray[y])
+	// {
+	// 	x = 0;
+	// 	while (game->twoarray[y][x] != '\n' && game->twoarray[y][x] != '\0')
+	// 	{
+	// 		if_in_render(game, mlxx, x, y);
+	// 		x++;
+	// 	}
+	// 	y++;
+	// }
+	// mlx_hook(mlxx->window, 17, 0L, tamlai_window, mlxx);
+	// mlx_key_hook(mlxx->window, zou, mlxx);
+	// mlx_loop(mlxx->mlx);
 }

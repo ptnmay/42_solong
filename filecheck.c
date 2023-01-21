@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/21 23:37:38 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/22 03:53:14 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,11 @@ int	main(int ac, char **av)
 
 	i = 0;
 	game = (t_gm *)malloc(sizeof(t_gm));
+	if (!game)
+	{
+		free(game);
+		exit(0);
+	}
 	if (ac == 2)
 	{
 		if (checkber(av[1]) == 1)
@@ -66,8 +71,11 @@ int	main(int ac, char **av)
 		check_c(game);
 		independent_map(game);
 		game->collect_c = 0;
-		render(game);
+		//render(game);
 	}
 	else
+	{
+		free(game);
 		ft_error("_/|\\_Oh My Buddha_/|\\_\nARGC ERROR!");
+	}
 }
