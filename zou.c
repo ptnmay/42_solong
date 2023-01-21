@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 03:59:18 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/20 18:26:31 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/21 23:21:24 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	nab_walk(t_mx *mlxx)
 	write(1, "\n", 1);
 }
 
-void	tamlai_window(t_mx *mlxx)
+int	tamlai_window(t_mx *mlxx)
 {
 	mlx_destroy_image(mlxx->mlx, mlxx->wall);
 	mlx_destroy_image(mlxx->mlx, mlxx->player);
@@ -28,6 +28,7 @@ void	tamlai_window(t_mx *mlxx)
 	mlx_destroy_image(mlxx->mlx, mlxx->exit);
 	mlx_destroy_window(mlxx->mlx, mlxx->window);
 	exit(EXIT_SUCCESS);
+	return (0);
 }
 
 int	check_zou(t_mx *mlxx, char **map, int x, int y)
@@ -42,12 +43,9 @@ int	check_zou(t_mx *mlxx, char **map, int x, int y)
 		}
 		if (map[y][x] == 'E')
 		{
-			//  if (mlxx->mlxxx->collect_c != mlxx->mlxxx->c)
-			// 	return (0);
 			if (mlxx->mlxxx->collect_c == mlxx->mlxxx->c)
 				tamlai_window(mlxx);
 		}
-		//printf("%s\n", map[2]);
 		nab_walk(mlxx);
 		return (1);
 	}

@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/20 02:18:01 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/21 23:37:38 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,11 @@ int	main(int ac, char **av)
 	int		i;
 
 	i = 0;
+	game = (t_gm *)malloc(sizeof(t_gm));
 	if (ac == 2)
 	{
 		if (checkber(av[1]) == 1)
 		{
-			game = (t_gm *)malloc(sizeof(t_gm));
 			game->namtuam_c = 0;
 			open_check(av[1], game);
 			srang_map(av[1], game);
