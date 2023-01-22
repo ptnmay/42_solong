@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:12:39 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/21 23:54:39 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/22 22:41:44 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,7 @@ void	srang_map(char *av, t_gm *game);
 void	check_wall(t_gm *game);
 void	p_u_nee(t_gm *game);
 void	ff_namtuam(t_gm *game, char **mapff, int x, int y);
+void	independent_cl(t_gm *game, char *checkline);
 void	independent_map(t_gm *game);
 void	render(t_gm *game);
 void	me_e_mai(t_gm *game);

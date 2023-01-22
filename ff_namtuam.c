@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 03:16:40 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/20 02:02:21 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/23 04:13:51 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,5 @@ void	independent_map(t_gm *game)
 		x_len++;
 	}
 	free(game->copy);
+	//free(game);
 }

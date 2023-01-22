@@ -6,7 +6,7 @@
 /*   By: psaeyang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:45:41 by psaeyang          #+#    #+#             */
-/*   Updated: 2023/01/22 03:53:14 by psaeyang         ###   ########.fr       */
+/*   Updated: 2023/01/23 04:28:46 by psaeyang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,16 +52,17 @@ int	main(int ac, char **av)
 	int		i;
 
 	i = 0;
-	game = (t_gm *)malloc(sizeof(t_gm));
-	if (!game)
-	{
-		free(game);
-		exit(0);
-	}
 	if (ac == 2)
 	{
 		if (checkber(av[1]) == 1)
 		{
+			game = (t_gm *)malloc(sizeof(t_gm));
+			if (!game)
+			{
+				ft_error("game error");
+				//free(game);
+				exit(0);
+			}
 			game->namtuam_c = 0;
 			open_check(av[1], game);
 			srang_map(av[1], game);
@@ -69,10 +70,20 @@ int	main(int ac, char **av)
 			me_e_mai(game);
 		}
 		check_c(game);
+		printf("map ok ja\n");
 		independent_map(game);
 		game->collect_c = 0;
 		//render(game);
+		// for (int i = 0; game->twoarray[i]; i++)
+			// free(game->twoarray[i]);
+		// free(game->twoarray);
+		printf("--------\n");
+		// for (int j = 0; game->copy[j]; j++)
+		// 	free(game->copy[j]);
+		// free(game->copy);
+		free(game);
 	}
+
 	else
 	{
 		free(game);
